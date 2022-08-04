@@ -10,13 +10,13 @@
             }
             table{
                 border: 2px solid #95a2a8;
-                border-collapse: collapse;
+                border-collapse: collapse;                
                 background-color: #f5f6d8;                
                 width: 500px;
                 padding: 5px;
-            }
+            }          
             th{
-                border: 1px solid #95a2a8;
+                border: 1px solid #95a2a8;                
                 background-color: #d5f6f8;
                 padding: 10px;
             }
@@ -24,12 +24,26 @@
                 border: 1px solid #95a2a8;
                 background-color: #f5f6f8;
                 padding: 5px;
-            }
+            }            
             td.num{
-                text-align: right;
+                text-align: right;           
+            }
+            tbody > tr:nth-child(odd){
+                background-color: #dca75d;
             }
             .bg{
                 background-color: #f5f6a4;
+            }
+            caption{
+                background-color: #d5f6e2;
+                border: 2px solid #95a2a8;
+                border-bottom: 0px;
+                text-align: center;
+                color: #253258;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.471);
+                font-size: 1.2em;
+                font-weight: 500;
+                padding: 10px;
             }
         </style>
     </head>
@@ -47,10 +61,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População dos Estados do Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -81,7 +96,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num bg">0000</td>
             </tr>
         </tfoot>
